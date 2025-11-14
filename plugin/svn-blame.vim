@@ -18,7 +18,7 @@ function! s:svnBlame()
   aboveleft 18vnew
 
   " Blame, ignoring white space changes.
-  %!svn blame -x-w "#"
+  %!svn blame -x--ignore-all-space -x--ignore-eol-style "#"
   setlocal nomodified readonly buftype=nofile nowrap winwidth=1
   setlocal nonumber
   if has('&relativenumber') | setlocal norelativenumber | endif
