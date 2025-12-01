@@ -23,6 +23,9 @@ function! s:svnBlame()
   setlocal nonumber
   if has('&relativenumber') | setlocal norelativenumber | endif
 
+  " Close this window with 'q'.
+  nnoremap <silent> <buffer> q :close<CR>
+
   " Return to original line.
   exec "normal " . line . "G"
 
